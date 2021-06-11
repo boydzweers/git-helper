@@ -10,7 +10,7 @@ ENDCOLOR=`tput sgr0`
 
 COMMIT_TYPE=""
 PS3="Select the type of commit: "
-OPTIONS=(feature: bug: test: documentation:)
+OPTIONS=(Feature: Bug: Test: Documentation:)
 
 clear
 
@@ -25,9 +25,11 @@ while true; do
     esac
 done
 
-clear
+echo "\n"
 
 git diff --stat --cached
+
+echo "\n"
 
 select commit_type in "${OPTIONS[@]}"
 do
