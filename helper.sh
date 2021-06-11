@@ -10,7 +10,7 @@ ENDCOLOR=`tput sgr0`
 
 COMMIT_TYPE=""
 PS3="Select the type of commit: "
-OPTIONS=(Feature: Bug: Test: Documentation:)
+OPTIONS=(Feature Bug Test Documentation Style Refactor Performance)
 
 clear
 
@@ -45,7 +45,7 @@ read -p "Message: " MESSAGE
 echo $COMMIT_TYPE;
 echo $JIRA
 
-git commit -m "${COMMIT_TYPE} ${MESSAGE}" -m ${JIRA}
+git commit -m "${COMMIT_TYPE}: ${MESSAGE}" -m ${JIRA}
 
 git log -1 HEAD --stat
 echo "${RED}############################################################${ENDCOLOR}"
