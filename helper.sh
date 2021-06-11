@@ -29,7 +29,7 @@ echo "Git status"
 
 git status --short
 
-echo "\n"
+echo ""
 
 select commit_type in "${OPTIONS[@]}"
 do
