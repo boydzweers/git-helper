@@ -17,7 +17,7 @@ echo "${RED}############# STARTING COMMIT #############${ENDCOLOR}"
 while true; do
     read -p "Stage all files?" yn
     case $yn in
-        [Yy]* ) git add . &&  && break;;
+        [Yy]* ) git add . && break;;
         [Nn]* ) exit;;
         * ) echo "Please answer y(es) or n(o).";;
     esac
