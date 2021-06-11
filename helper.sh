@@ -25,9 +25,9 @@ while true; do
     esac
 done
 
-echo "\n"
+echo "Git status"
 
-git diff --stat --cached
+git status --short
 
 echo "\n"
 
