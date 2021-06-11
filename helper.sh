@@ -12,6 +12,8 @@ COMMIT_TYPE=""
 PS3="Select the type of commit: "
 OPTIONS=(feature: bug: test: documentation:)
 
+clear
+
 echo "${RED}############# STARTING COMMIT #############${ENDCOLOR}"
 
 while true; do
@@ -22,6 +24,8 @@ while true; do
         * ) echo "Please answer y(es) or n(o).";;
     esac
 done
+
+clear
 
 git diff --stat --cached
 
