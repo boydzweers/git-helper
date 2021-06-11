@@ -9,7 +9,7 @@ There is also the option to add the JIRA ticket number to the commit description
 
 #### By bash
 ```bash
-LINE="alias commit='bash < (curl -s -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/boydzweers/git-helper/main/helper.sh)'"
+LINE="alias commit='bash <(curl -s -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/boydzweers/git-helper/main/helper.sh)'"
 FILE="path/to/.bashrc"
 grep -q "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
 . ~/.bashrc
@@ -17,7 +17,7 @@ grep -q "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
 
 #### By hand
 ```
-alias commit='bash < (curl -s -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/boydzweers/git-helper/main/helper.sh)'
+alias commit='bash <(curl -s -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/boydzweers/git-helper/main/helper.sh)'
 ```
 
 #### By file
