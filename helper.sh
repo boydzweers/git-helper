@@ -17,11 +17,13 @@ echo "${RED}############# STARTING COMMIT #############${ENDCOLOR}"
 while true; do
     read -p "Stage all files?" yn
     case $yn in
-        [Yy]* ) git add . && git diff --name-only --cached && break;;
-        [Nn]* ) git diff --name-only --cached && exit;;
+        [Yy]* ) git add . &&  && break;;
+        [Nn]* ) exit;;
         * ) echo "Please answer y(es) or n(o).";;
     esac
 done
+
+git diff --stat --cached
 
 select commit_type in "${OPTIONS[@]}"
 do
